@@ -5,10 +5,10 @@ from sparktestingbase.testcase import SparkTestingBaseTestCase
 from ..solution import answer
 from lib.tools.timeout import *
 
-class GroupByCategoryTest(SparkTestingBaseTestCase):
+class CountByCategoryTest(SparkTestingBaseTestCase):
     """Simple hell world example test."""
 
-    def test_group_by_category(self):
+    def test_count_by_category(self):
         """Test a parallelize & collect."""
         input = [('apple', 'fruit'),
                 ('apple', 'fruit'),
@@ -25,7 +25,7 @@ class GroupByCategoryTest(SparkTestingBaseTestCase):
         print(result.collect())
         self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
-    def test_group_by_category_with_order(self):
+    def test_count_by_category_with_order(self):
         """Test a parallelize & collect."""
         input = [('mac', '3c'),
                 ('apple', 'fruit'),
