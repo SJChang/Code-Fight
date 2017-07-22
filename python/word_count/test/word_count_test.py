@@ -2,7 +2,7 @@
 
 import unittest2
 from sparktestingbase.testcase import SparkTestingBaseTestCase
-from word_count.solution import answer
+from ..solution import answer
 from lib.tools.timeout import *
 
 class WordCountTest(SparkTestingBaseTestCase):
