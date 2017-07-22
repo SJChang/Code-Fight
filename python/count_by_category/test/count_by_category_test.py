@@ -16,7 +16,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
                 ('mac', '3c'),
                 ('ipad', '3c'),
                 ('ipad', '3c'),
-                ('ipad', '3c'),]
+                ('ipad', '3c')]
 
         rdd = self.sc.parallelize(input)
         timeout_ = timeout(answer, 5)
