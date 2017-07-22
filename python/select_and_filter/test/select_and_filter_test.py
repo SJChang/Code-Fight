@@ -9,7 +9,6 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
     """Simple hell world example test."""
 
     def test_select_with_dup(self):
-        """Test a parallelize & collect."""
         input = [('apple', 'fruit'),
                 ('apple', 'fruit'),
                 ('banana', 'fruit'),
@@ -22,8 +21,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 'fruit')
         expected = self.sc.parallelize(['apple', 'banana'])
-        print(result.collect())
-        self.assertTrue(self.assertRDDEquals(expected, result))
+        self.assertRDDEquals(expected, result)
 
   
     def test_select_without_dup(self):
@@ -36,8 +34,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 'fruit')
         expected = self.sc.parallelize(['apple', 'banana'])
-        print(result.collect())
-        self.assertTrue(self.assertRDDEquals(expected, result))
+        self.assertRDDEquals(expected, result)
 
     def test_select_filter_number(self):
         input = [('apple', 1),
@@ -49,8 +46,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 5)
         expected = self.sc.parallelize(['banana'])
-        print(result.collect())
-        self.assertTrue(self.assertRDDEquals(expected, result)) 
+        self.assertRDDEquals(expected, result)
 
 
 if __name__ == "__main__":
