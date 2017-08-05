@@ -14,7 +14,7 @@ class SelectFilter2Test(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 2)
         expected = self.sc.parallelize(["hello"])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
     def test_select_filter_by_count_distinct(self):
         input = ["hello hello world world"]
@@ -22,7 +22,7 @@ class SelectFilter2Test(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 2)
         expected = self.sc.parallelize(["hello", "world"])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
     def test_return_none(self):
         input = ["hello hello world"]
@@ -30,8 +30,7 @@ class SelectFilter2Test(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 3)
         expected = self.sc.parallelize([])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
-    
 if __name__ == "__main__":
     unittest2.main()
