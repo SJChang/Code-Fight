@@ -8,6 +8,6 @@ rddB = `sc.parallelize([('apple', 5), ('banana', 3), ('kiwi', 10)])`
  
 **Output**: 
 
-`[('apple', 'fruit', 5), ('apple', 'fruit', 5), ('banana', 'fruit', 3)]` (RDD)
+`[('apple', ('fruit', 5)), ('apple', ('fruit', 5)), ('banana', ('fruit', 3))]` (RDD)
 
 
