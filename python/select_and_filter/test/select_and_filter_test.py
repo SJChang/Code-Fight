@@ -21,7 +21,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 'fruit')
         expected = self.sc.parallelize(['apple', 'banana'])
-        self.assertRDDEquals(expected, result)
+        self.assertTrue(self.assertRDDEquals(expected, result))
 
   
     def test_select_without_dup(self):
@@ -34,7 +34,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 'fruit')
         expected = self.sc.parallelize(['apple', 'banana'])
-        self.assertRDDEquals(expected, result)
+        self.assertTrue(self.assertRDDEquals(expected, result))
 
     def test_select_filter_number(self):
         input = [('apple', 1),
@@ -46,8 +46,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, 5)
         expected = self.sc.parallelize(['banana'])
-        self.assertRDDEquals(expected, result)
-
+        self.assertTrue(self.assertRDDEquals(expected, result))
 
 if __name__ == "__main__":
     unittest2.main()

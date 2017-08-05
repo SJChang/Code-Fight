@@ -22,7 +22,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd)
         expected = self.sc.parallelize([('3c','ipad', 3), ('3c', 'mac', 1), ('fruit', 'apple', 2), ('fruit', 'banana', 1)])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
     def test_count_by_category_with_order(self):
         """Test a parallelize & collect."""
@@ -39,7 +39,7 @@ class CountByCategoryTest(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd)
         expected = self.sc.parallelize([('3c', 'mac', 3), ('3c', 'ipad', 2), ('fruit', 'apple', 2), ('fruit', 'banana', 1)])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
    
 if __name__ == "__main__":
