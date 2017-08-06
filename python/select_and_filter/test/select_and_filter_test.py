@@ -5,7 +5,7 @@ from sparktestingbase.testcase import SparkTestingBaseTestCase
 from ..solution import answer
 from lib.tools.timeout import *
 
-class CountByCategoryTest(SparkTestingBaseTestCase):
+class SelectFilterTest(SparkTestingBaseTestCase):
     """Simple hell world example test."""
 
     def test_select_with_dup(self):
