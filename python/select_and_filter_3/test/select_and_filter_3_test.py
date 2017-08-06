@@ -20,7 +20,7 @@ class SelectFilter3Test(SparkTestingBaseTestCase):
         expected = self.sc.parallelize(
                     [(u'Some1', (u'ABC', 9989)),
                      (u'Some4', (u'ABC', 5379))])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
     def test_select_filter_by_string_2(self):
         input = [(u'Some1', (u'ABC', 9989)),
@@ -32,7 +32,7 @@ class SelectFilter3Test(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, keyword)
         expected = self.sc.parallelize([])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
     def test_select_filter_by_string_3(self):
         input = [(u'Some1', (u'ABC', 9989)),
@@ -44,7 +44,7 @@ class SelectFilter3Test(SparkTestingBaseTestCase):
         timeout_ = timeout(answer, 5)
         result = timeout_(rdd, keyword)
         expected = self.sc.parallelize([(u'Some2', (u'XYZ', 235))])
-        self.assertRDDEqualsWithOrder(expected, result)
+        self.assertTrue(self.assertRDDEqualsWithOrder(expected, result))
 
 if __name__ == "__main__":
     unittest2.main()
