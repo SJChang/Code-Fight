@@ -5,7 +5,7 @@ from sparktestingbase.testcase import SparkTestingBaseTestCase
 from ..solution import answer
 from lib.tools.timeout import *
 
-class WordCountTest(SparkTestingBaseTestCase):
+class WordCountWithOrderTest(SparkTestingBaseTestCase):
     """Simple hell world example test."""
 
     def test_order_by_key(self):

@@ -2,7 +2,7 @@
 
 **Input**: 
 
-rddA = `sc.parallelize([('fruit','apple'), ('fruit','apple'), ('fruit','banana'), ('fruit','mac')])`
+rddA = `sc.parallelize([('fruit','apple'), ('fruit','apple'), ('fruit','banana'), ('3c','mac')])`
 
 rddB = `sc.parallelize([('apple', 5), ('banana', 3), ('kiwi', 10)])`   
  

@@ -5,7 +5,7 @@ from sparktestingbase.testcase import SparkTestingBaseTestCase
 from ..solution import answer
 from lib.tools.timeout import *
 
-class CountByCategoryTest(SparkTestingBaseTestCase):
+class InnerJoinTest(SparkTestingBaseTestCase):
     """Simple hell world example test."""
 
     def test_basic_join(self):
