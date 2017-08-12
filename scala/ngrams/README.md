@@ -3,6 +3,9 @@
 N-Grams is a contiguous sequence of n items from a given sequence of text or speech. It is widely used in text mining and natural language processing tasks.
 
 Given a input string, N of N-Grams and top frequency topN, return top n N-Grams and its counts.
+You have to do some simple preprocessing:
+    1. Transform all characters to lower case.
+    2. Keep the hyphen between words, e.g., hard-working.
 
 
 **Input**: 
