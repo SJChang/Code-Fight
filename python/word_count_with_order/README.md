@@ -1,6 +1,6 @@
 # Word Count With Order
 
-Please count words and order by words in alphabeta, count in decending
+Please count words and order by words in alphabeta, output in decending order.
 
 **Input**: `["hello world"](RDD)` 
 

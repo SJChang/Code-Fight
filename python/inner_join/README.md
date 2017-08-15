@@ -1,5 +1,7 @@
 # Inner Join
 
+Given two tables, if there is a single column in each that has a common key, merge it together.
+
 **Input**: 
 
 rddA = `sc.parallelize([('fruit','apple'), ('fruit','apple'), ('fruit','banana'), ('3c','mac')])`

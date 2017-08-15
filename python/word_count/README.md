@@ -1,6 +1,6 @@
 # Word Count   
 
-Please count words and without any order.
+Please count words without any order.
 
 **Input**: `["hello world"](RDD)` 
 

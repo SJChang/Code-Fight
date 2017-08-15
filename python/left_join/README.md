@@ -1,5 +1,8 @@
 # Inner Join
 
+Given two datasets, returns all records from the left table (rddA), and the matched records from the right table (rddB). The result is NULL from the right side, if there is no match.
+
+
 **Input**: 
 
 rddA = `sc.parallelize([('fruit','apple'), ('fruit','apple'), ('fruit','banana'), ('3c','mac')])`
