@@ -2,6 +2,7 @@
 
 Filter the second element, using the given condition.
 
+
 **input**: 
 
 rdd = 
