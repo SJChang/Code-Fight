@@ -1,5 +1,9 @@
 # Select and Filter 3
 
+
+Using the given condition to filter the second element, and adding it's value.
+
+
 **input**: 
 
 rdd = 

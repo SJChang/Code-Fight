@@ -1,5 +1,8 @@
 # Select and Filter 3
 
+Filter the second element, using the given condition.
+
+
 **input**: 
 
 rdd = 
